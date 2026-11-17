@@ -1,0 +1,55 @@
+{
+  "captured": "2026-11-17",
+  "printer_name": "ChimpBot 2.4 350",
+  "host": {
+    "hostname": "raspberrypi",
+    "board": "Raspberry Pi 4 Model B Rev 1.4 (4 GB)",
+    "os": "Debian GNU/Linux 12 (bookworm)",
+    "kernel": "6.6.62+rpt-rpi-v8",
+    "python": "3.11.2",
+    "storage": "Samsung 256 GB microSD (GE4S5, mfg 2/2023)",
+    "network": ["wlan0 (Wi-Fi only)"],
+    "lan_ip": "192.168.0.123"
+  },
+  "mcus": {
+    "mcu": "BigTreeTech Octopus V1 (STM32F446) - /dev/serial/by-id/usb-Klipper_stm32f446xx_23004A000150304E35313720-if00",
+    "mcu nhk": "LDO Nitehawk-SB toolboard (RP2040) - /dev/serial/by-id/usb-Klipper_rp2040_3232323236192463-if00",
+    "host mcu": "klipper-mcu service installed"
+  },
+  "services": ["klipper", "klipper-mcu", "moonraker", "KlipperScreen", "crowsnest", "moonraker-obico", "octoeverywhere"],
+  "software_versions": {
+    "klipper":         {"installed": "v0.12.0-396-gb7233d11", "available": "v0.13.0-822", "channel": "dev"},
+    "moonraker":       {"installed": "v0.9.3-0-g71f9e677",   "available": "v0.11.0-4",   "channel": "dev"},
+    "mainsail":        {"installed": "v2.12.0",              "available": "v2.19.0",     "channel": "stable"},
+    "KlipperScreen":   {"installed": "v0.4.4-17-g4596c482",  "available": "v0.4.7-206",  "channel": "dev"},
+    "crowsnest":       {"installed": "v4.1.9-1-gd75a3aeb",   "available": "v4.2.0-1",    "channel": "dev"},
+    "moonraker-obico": {"installed": "v2.0.9-0-g4c0b7b6c",   "available": "v2.2.4-2",    "channel": "dev"},
+    "octoeverywhere":  {"installed": "3.6.3-3-gc4660b39",    "available": "5.4.1-0",     "channel": "beta"}
+  },
+  "klipper_config_warnings": [],
+  "print_history_totals": {
+    "total_jobs": 351,
+    "total_time_hours": 1293.2,
+    "total_print_time_hours": 1197.4,
+    "total_filament_used_m": 9196.2,
+    "longest_print_hours": 26.9
+  },
+  "gcode_library": {"files": 245, "size_gb": 5.96},
+  "moonraker_db_namespaces": ["octoeverywhere", "mainsail", "obico", "maintenance", "webcams", "announcements", "gcode_metadata", "update_manager", "moonraker"],
+  "loaded_gcode_macros": [
+    "_OBICO_LAYER_CHANGE", "OBICO_LINK_STATUS", "_OBICO_RELINK",
+    "CANCEL_PRINT", "PAUSE", "RESUME", "SET_PAUSE_NEXT_LAYER", "SET_PAUSE_AT_LAYER", "SET_PRINT_STATS_INFO",
+    "_TOOLHEAD_PARK_PAUSE_CANCEL", "_CLIENT_EXTRUDE", "_CLIENT_RETRACT",
+    "INITIALIZE_VARIABLE", "G29", "DUMP_VARS", "START_PRINT", "PURGE", "END_PRINT", "SAVE_AT_END", "SAVE_IF_SET",
+    "BED_SCREWS", "LOAD_FILAMENT", "UNLOAD_FILAMENT", "M600", "SEARCH_VARS",
+    "lights_off", "lights_on", "lights_toggle", "TOGGLE_NEVERMORE",
+    "clean_nozzle", "QUAD__GANTRY_LEVEL", "PRINT_START", "PRINT_END"
+  ],
+  "not_backed_up_here": {
+    "reason": "Large/binary or redundant; still on the Pi in ~/printer_data/config",
+    "klipper_autosave_backups": "93 files printer-2022...-2024...cfg (~1.9 MB) created by SAVE_CONFIG",
+    "zip_archives": ["config-20231021-161139.zip", "config-20231026-222558.zip", "config-20240213-102728.zip", "config-20240927-224720.zip", "config-20240927-224736.zip", "config-20240927-224754.zip", "config-20241208-094754.zip", "logs-20240213-102751.zip", "logs-20240312-070547.zip"],
+    "gcode_files": "245 files, ~6 GB",
+    "secrets": "Obico auth_token redacted in config/moonraker-obico.cfg"
+  }
+}

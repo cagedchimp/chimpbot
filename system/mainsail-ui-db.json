@@ -1,0 +1,41 @@
+{
+  "mainsail": {
+    "console": {"hideWaitTemperatures": true},
+    "dashboard": {
+      "nonExpandPanels": {"widescreen": [], "mobile": ["status-panel"]},
+      "mobileLayout": [
+        {"name": "webcam", "visible": true}, {"name": "toolhead-control", "visible": true},
+        {"name": "extruder-control", "visible": true}, {"name": "macros", "visible": true},
+        {"name": "machine-settings", "visible": true}, {"name": "miscellaneous", "visible": true},
+        {"name": "temperature", "visible": true}, {"name": "miniconsole", "visible": false}
+      ],
+      "widescreenLayout1": [{"name": "toolhead-control", "visible": true}, {"name": "extruder-control", "visible": true}],
+      "widescreenLayout2": [{"name": "temperature", "visible": true}, {"name": "machine-settings", "visible": true}, {"name": "miscellaneous", "visible": true}],
+      "widescreenLayout3": [{"name": "webcam", "visible": true}, {"name": "miniconsole", "visible": true}, {"name": "macros", "visible": true}]
+    },
+    "gcodeViewer": {"klipperCache": {"kinematics": "corexy", "axis_maximum": [350, 350, 330, 0], "axis_minimum": [3, 0, -100, 0]}},
+    "gcodehistory": {"entries": ["M900", "PID_CALIBRATE HEATER=extruder TARGET=250 ", "PID_CALIBRATE HEATER=extruder TARGET=240", "save_config"]},
+    "general": {"printername": "ChimpBot 2.4 350"},
+    "initVersion": "2.10.0",
+    "view": {
+      "configfiles": {"countPerPage": -1, "sortBy": "filename", "sortDesc": true},
+      "webcam": {"currentCam": {"dashboard": "all", "page": "all"}},
+      "history": {"toggleChartCol2": "chart"}
+    }
+  },
+  "maintenance": {"03f69c39-09ec-4a33-8a45-bc6a55af48b8": {"name": "MAINTENANCE_INIT"}},
+  "webcams": {
+    "4417862b-7b2c-4109-aca5-f2cb1ca84470": {
+      "name": "Angry", "service": "mjpegstreamer-adaptive", "targetFps": 15, "targetFpsIdle": 15,
+      "urlStream": "/webcam2/?action=stream", "urlSnapshot": "/webcam2/?action=snapshot",
+      "flipX": true, "flipY": true, "rotation": 180, "enabled": true, "aspectRatio": "4:3",
+      "icon": "mdiWebcam", "location": "printer", "extra_data": {}
+    },
+    "c3870ba9-1a13-40e0-a454-3d0b68ff50a4": {
+      "name": "Logi - Top", "service": "mjpegstreamer-adaptive", "targetFps": 30, "targetFpsIdle": 15,
+      "urlStream": "/webcam/?action=stream", "urlSnapshot": "/webcam/?action=snapshot",
+      "flipX": false, "flipY": false, "rotation": 180, "enabled": true, "aspectRatio": "4:3",
+      "icon": "mdiWebcam", "location": "printer", "extra_data": {"hideFps": true}
+    }
+  }
+}

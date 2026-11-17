@@ -1,0 +1,75 @@
+[server]
+host = 0.0.0.0
+port = 7125
+max_upload_size = 1024
+klippy_uds_address = /home/pi/printer_data/comms/klippy.sock
+
+[file_manager]
+enable_object_processing = true
+
+[authorization]
+cors_domains =
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients =
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[update_manager]
+refresh_interval = 168
+
+[update_manager mainsail]
+type = web
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
+[update_manager KlipperScreen]
+type = git_repo
+path = /home/pi/KlipperScreen
+origin = https://github.com/jordanruthe/KlipperScreen.git
+env = /home/pi/.KlipperScreen-env/bin/python
+requirements = scripts/KlipperScreen-requirements.txt
+install_script = scripts/KlipperScreen-install.sh
+
+[update_manager moonraker-obico]
+type = git_repo
+path = ~/moonraker-obico
+origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
+env = /home/pi/moonraker-obico-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services =
+	moonraker-obico
+
+[update_manager crowsnest]
+type = git_repo
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+primary_branch = legacy/v3
+install_script = tools/install.sh
+
+[update_manager octoeverywhere]
+type = git_repo
+channel = beta
+path = /home/pi/octoeverywhere
+origin = https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere.git
+env = /home/pi/octoeverywhere-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services =
+	octoeverywhere
+
+[announcements]
+subscriptions =
+	octoeverywhere
